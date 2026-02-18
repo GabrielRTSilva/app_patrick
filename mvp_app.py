@@ -1,5 +1,11 @@
 # Main
 import streamlit as st
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+PATH_PESSOAS = BASE_DIR / "data" / "dim_pessoas_novo_formulario_sintetico.xlsx"
+PATH_FIN = BASE_DIR / "data" / "dim_pagamentos_sintetico.xlsx"
+
 
 from mod_origens import carregar_dim_pessoas, carregar_dim_pagamentos
 from mod_transformacoes import (
